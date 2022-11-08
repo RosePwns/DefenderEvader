@@ -1,7 +1,8 @@
 # Windows 11/10 Bypass AV & Backdoor
-##### Educational purposes only!
+##### For educational purposes only!
 ##### Social Engineering required!
 ## Steps:
+
 #### Get victim to download .bat file to their machine, i.e through ngrok server, google drive, discord, or other means.
 #### Make it convincing by turning it into a trojan horse.
 
