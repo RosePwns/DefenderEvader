@@ -1,7 +1,7 @@
 # Windows 11/10 Bypass AV & Backdoor
 ##### For educational purposes only!
 ##### Social Engineering required!
-## Steps:
+## Steps to Compromise:
 
 1. Make it convincing by turning it into a trojan horse.
 2. Get victim to download .bat file to their machine (i.e through ngrok server, google drive, discord, or other means.)
