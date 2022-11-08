@@ -1,4 +1,5 @@
 # Windows 11/10 Bypass AV & Backdoor
+##### Requires victim to have Admin Privs
 ##### For educational purposes only!
 ##### Social Engineering required!
 ## Steps to Compromise:
