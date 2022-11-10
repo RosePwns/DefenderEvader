@@ -1,6 +1,6 @@
 # Windows 11/10 Evade AV & Backdoor
 
-#### **For educational purposes only!**
+#### **NOTE: For educational purposes only!**
 #### **NOTE: Some Meterpreter commands may upset Defender.**
 
 ## Steps to Compromise:
