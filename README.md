@@ -1,6 +1,7 @@
 # Windows 11/10 Evade AV & Backdoor
 
 #### **For educational purposes only!**
+#### **NOTE: Some Meterpreter commands may upset Defender.**
 
 ## Steps to Compromise:
 
@@ -25,6 +26,6 @@ trojan.ps1 <br>
 encoded_trojan.ps1
 1. **Setup Trojan Horse.** 
 8. **Get creative. Have victim download "exe" file to their machine (i.e through ngrok server, google drive, discord, or other means.)**
-
+  
 # Demonstration Video
 Insert video in markdown!
