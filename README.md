@@ -1,7 +1,6 @@
 # Windows 11/10 Evade AV & Backdoor
 
 #### **For educational purposes only!**
-#### **Requires victim to have Admin Privs**
 
 ## Steps to Compromise:
 
