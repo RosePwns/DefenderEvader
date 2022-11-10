@@ -2,6 +2,7 @@
 
 #### **NOTE: For educational purposes only!**
 #### **NOTE: Some Meterpreter commands may upset Defender.**
+#### **NOTE: Defender Smart screen still alerts of potential virus.**
 
 ## Steps to Compromise:
 
